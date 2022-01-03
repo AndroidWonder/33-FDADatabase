@@ -12,6 +12,7 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
@@ -26,7 +27,7 @@ public class MainActivity extends Activity {
     private TextView text = null;
 
     //messages from background thread contain data for UI
-    Handler handler = new Handler(){
+    Handler handler = new Handler(Looper.getMainLooper()){
         public void handleMessage(Message msg) {
             String title =(String) msg.obj;
             text.append(title + "\n" +"\n");
