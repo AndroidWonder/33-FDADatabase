@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/33-FDADatabase.iml" filepath="$PROJECT_DIR$/33-FDADatabase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/33-FDADatabase.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/33-FDADatabase.app.iml" />
     </modules>
   </component>
 </project>
