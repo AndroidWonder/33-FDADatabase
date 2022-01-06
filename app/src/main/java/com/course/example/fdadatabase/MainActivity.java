@@ -53,7 +53,9 @@ public class MainActivity extends Activity {
             StringBuilder builder = new StringBuilder();
 
             //check out A1 BBQ Sauce
-            String Url = "https://api.nal.usda.gov/ndb/reports/?ndbno=45140555&type=b&format=json&api_key=DEMO_KEY";
+            //String Url = "https://api.nal.usda.gov/fdc/v1/food/74406010?api_key=DEMO_KEY";
+            //String Url = "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=Cheddar%20Cheese";
+            String Url = "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=BBQ%20Sauce";
 
             InputStream is = null;
 
