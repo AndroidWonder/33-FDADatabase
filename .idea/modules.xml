@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/33-FDADatabase.iml" filepath="$PROJECT_DIR$/33-FDADatabase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/33-FDADatabase.iml" filepath="$PROJECT_DIR$/.idea/modules/33-FDADatabase.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/33-FDADatabase.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/33-FDADatabase.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/33-FDADatabase.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/33-FDADatabase.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/33-FDADatabase.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/33-FDADatabase.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/33-FDADatabase.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/33-FDADatabase.app.unitTest.iml" />
     </modules>
   </component>
 </project>
