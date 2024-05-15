@@ -104,33 +104,38 @@ public class MainActivity extends Activity {
             //decode JSON
             try {
                 JSONObject obj = new JSONObject(readJSONFeed);
-                JSONObject report = obj.getJSONObject("report");
+                JSONArray foods = new JSONArray();
+                foods = obj.getJSONArray("foods");
+               for(int i = 0; i<foods.length(); i++){
+                   JSONObject food = foods.getJSONObject(i);
 
-                String type = report.getString("type");
-                Log.i("JSON", "type " + type);
+                    String brand = food.getString("brandName");
+                    Log.i("JSON", "brand " + brand);
+                   msg = handler.obtainMessage();
+                   msg.obj = brand;
+                   handler.sendMessage(msg);
 
-                JSONObject food = report.getJSONObject("food");
-                String name  = food.getString("name");
-                Log.i("JSON", "name " + name);
-                msg = handler.obtainMessage();
-                msg.obj = name;
-                handler.sendMessage(msg);
-
-                JSONObject ing = food.getJSONObject("ing");
-                String desc  = ing.getString("desc");
-                Log.i("JSON", "desc " + desc);
-
-                //parse for UI
-                String[] tokens = desc.split(",");
-
-                for (int i=0; i<tokens.length; i++) {
-
+                    String country = food.getString("marketCountry");
+                    Log.i("JSON", "country " + country);
                     msg = handler.obtainMessage();
-                    msg.obj = tokens[i];
+                    msg.obj = country;
                     handler.sendMessage(msg);
 
-                }
 
+                    String desc = food.getString("ingredients");
+                    Log.i("JSON", "ingredients " + desc);
+
+                    //parse for UI
+                    String[] tokens = desc.split(",");
+
+                    for (int j = 0; j < tokens.length; j++) {
+
+                        msg = handler.obtainMessage();
+                        msg.obj = "        " + tokens[j];
+                        handler.sendMessage(msg);
+
+                    }
+                }
             } catch (JSONException e) {e.getMessage();
                 e.printStackTrace();
             }
